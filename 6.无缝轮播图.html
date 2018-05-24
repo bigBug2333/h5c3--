@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        div {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        div:nth-child(2n+1) ul {
+            width: 1000%;
+            position: absolute;
+            left: 0;
+            animation: play1 5s linear infinite;
+        }
+        
+        div:nth-child(2n) ul {
+            width: 1000%;
+            position: absolute;
+            left: 0;
+            animation: play2 5s linear infinite;
+        }
+
+        li {
+            float: left;
+        }
+
+        /* div:hover ul {
+            animation-play-state: paused;
+        } */
+
+        /*1. 声明动画*/
+        @keyframes play1 {
+            from {
+                left: 0;
+            }
+            to {
+                left: -300px;
+            }
+        }
+        @keyframes play2 {
+            from {
+                left: 0;
+            }
+            to {
+                left: 300px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+            <ul>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+                <li><img src="images/4.gif" alt=""></li>
+    
+    
+    
+                <li><img src="images/2.gif" alt=""></li>
+                <li><img src="images/3.gif" alt=""></li>
+            </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+            <li><img src="images/4.gif" alt=""></li>
+
+
+
+            <li><img src="images/2.gif" alt=""></li>
+            <li><img src="images/3.gif" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

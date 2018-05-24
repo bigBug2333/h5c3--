@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+    }
+
+    ul {
+      width: 200px;
+      height: 200px;
+      margin: 200px auto;
+      position: relative;
+
+      transform-style: preserve-3d;
+      /*transform: rotateX(45deg) rotateY(45deg);*/
+      cursor: pointer;
+    }
+
+    ul li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: pink;
+      transition: all 1s;
+      opacity: .8;
+      font-size: 50px;
+      line-height: 100px;
+      text-align: center;
+      /*backface-visibility: hidden;*/
+      line-height: 200px;
+      text-align: center;
+    }
+
+    li:nth-child(1) {
+      background-color: green;
+	  z-index: 6;
+    }
+    
+    li:nth-child(2) {
+      background-color: red;
+	  z-index: 5;
+    }
+    
+    li:nth-child(3) {
+      background-color: blue;
+	  z-index: 4;
+    }
+
+    li:nth-child(4) {
+      background-color: purple;
+	  z-index: 3;
+    }
+
+    li:nth-child(5) {
+      background-color: skyblue;
+	  z-index: 2;
+    }
+
+    li:nth-child(6) {
+      background-color: gray;
+	  z-index: 1;
+    }
+  </style>
+</head>
+<body>
+<button>第1个面</button>
+<button>第2个面</button>
+<button>第3个面</button>
+<button>第4个面</button>
+<button>第5个面</button>
+<button>第6个面</button>
+<button>自动</button>
+<ul>
+  <li>前</li>
+  <li>上</li>
+  <li>后</li>
+  <li>下</li>
+  <li>右</li>
+  <li>左</li>
+</ul>
+
+<script>
+  var ul = document.querySelector("ul");
+
+  //第一个面
+  var btn1 = document.querySelector("button:nth-child(1)");
+  btn1.addEventListener("click", function () {
+    //第一个面
+    setTimeout(function () {
+      document.querySelector("li:nth-child(1)").style.transform = "translateZ(100px)"
+    }, 0);
+  });
+  //第二个面
+  var btn2 = document.querySelector("button:nth-child(2)");
+  btn2.addEventListener("click", function () {
+    setTimeout(function () {
+      document.querySelector("li:nth-child(2)").style.transform = "rotateX(90deg)"
+    }, 0);
+
+    setTimeout(function () {
+      document.querySelector("li:nth-child(2)").style.transform = "rotateX(90deg) translateZ(100px)"
+    }, 1000);
+  })
+  //第三个面
+  var btn3 = document.querySelector("button:nth-child(3)");
+  btn3.addEventListener("click", function () {
+    setTimeout(function () {
+      document.querySelector("li:nth-child(3)").style.transform = "rotateX(180deg)"
+    }, 0);
+
+    setTimeout(function () {
+      document.querySelector("li:nth-child(3)").style.transform = "rotateX(180deg) translateZ(100px)"
+    }, 1000);
+  });
+  //第四个面
+  var btn4 = document.querySelector("button:nth-child(4)");
+  btn4.addEventListener("click", function () {
+    setTimeout(function () {
+      document.querySelector("li:nth-child(4)").style.transform = "rotateX(270deg)"
+    }, 0);
+
+    setTimeout(function () {
+      document.querySelector("li:nth-child(4)").style.transform = "rotateX(270deg) translateZ(100px)"
+    }, 1000);
+  });
+  //第五个面
+  var btn5 = document.querySelector("button:nth-child(5)");
+  btn5.addEventListener("click", function () {
+    setTimeout(function () {
+      document.querySelector("li:nth-child(5)").style.transform = "rotateY(90deg)"
+    }, 0);
+
+    setTimeout(function () {
+      document.querySelector("li:nth-child(5)").style.transform = "rotateY(90deg) translateZ(100px)"
+    }, 1000);
+  });
+  //第六个面
+  var btn6 = document.querySelector("button:nth-child(6)");
+  btn6.addEventListener("click", function () {
+    setTimeout(function () {
+      document.querySelector("li:nth-child(6)").style.transform = "rotateY(270deg)"
+    }, 0);
+
+    setTimeout(function () {
+      document.querySelector("li:nth-child(6)").style.transform = "rotateY(270deg) translateZ(100px)"
+    }, 1000);
+  });
+
+
+  var btn7 = document.querySelector("button:nth-child(7)");
+  btn7.addEventListener("click", function () {
+    btn1.click();
+    setTimeout(function () {
+      btn2.click();
+    }, 1000);
+
+    setTimeout(function () {
+      btn3.click();
+    }, 3000);
+
+    setTimeout(function () {
+      btn4.click();
+    }, 5000);
+
+    setTimeout(function () {
+      btn5.click();
+    }, 7000);
+
+    setTimeout(function () {
+      btn6.click();
+    }, 9000);
+
+    setTimeout(function () {
+      btn2.click();
+    }, 1000);
+
+
+  });
+
+  //记录开始位置
+  var startX;
+  var startY;
+  var currentX = 0;
+  var currentY = 0;
+  var flag = false;//鼠标没按下
+  document.addEventListener("mousedown", function (e) {
+    startX = e.clientX;
+    startY = e.clientY;
+    flag = true;//鼠标按下
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    e.preventDefault();
+    if (flag) {
+      console.log("哈哈")
+      var x = e.clientX - startX;
+      var y = e.clientY - startY;
+      ul.style.transform = "rotateY(" + (currentX + x) + "deg) rotateX(" + -(currentY + y) + "deg)";
+    }
+  });
+
+  document.addEventListener("mouseup", function (e) {
+    currentX += e.clientX - startX;
+    currentY += e.clientY - startY;
+    console.log(currentX, currentY);
+
+    startX = 0;
+    startY = 0;
+    flag = false;//鼠标按下
+  });
+
+
+</script>
+
+</body>
+</html>

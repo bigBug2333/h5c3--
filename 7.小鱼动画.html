@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+        background-color: green;
+    }
+    .fish {
+        
+        width: 174px;
+        height: 126px;
+        background-image: url(fish-12-126.png);
+
+        animation: dou 1s infinite steps(12), you 4s infinite linear;
+    }
+    
+    @keyframes dou {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 0 -1512px;
+        }
+        }
+        
+        @keyframes you {
+        0% {
+            transform: translateX(0px) rotate(0deg);
+        }
+
+        25% {
+            transform: translateX(1000px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateX(1000px) rotate(180deg);
+        }
+
+        75% {
+            transform: translateX(0px) rotate(180deg);
+        }
+
+        100% {
+            transform: translateX(0px) rotate(360deg);
+        }
+    }
+
+
+    .fish:nth-child(1),
+    .fish:nth-child(5){
+        animation-duration: 2s, 8s;
+    }
+
+    .fish:nth-child(2),
+    .fish:nth-child(4){
+        animation-duration: 1.5s, 6s;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="fish"></div>
+    <div class="fish"></div>
+    <div class="fish"></div>
+    <div class="fish"></div>
+    <div class="fish"></div>
+
+</body>
+</html>
